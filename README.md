@@ -23,7 +23,7 @@ rtmp/HLSサーバーの自動取得
 
 3. AgRec.pyの編集(高画質版利用時のみ)
  [ここ](https://github.com/jbqfm/AgRec/blob/8af3e77d857fb41e3d6eb67dce950ca0bcf9589c/AgRec.py#L136)以下2行を下記のように編集
- ```python
+ ```
  high = [高画質版を含むVariantなM3U8アドレス]
  pl = None
  ```
