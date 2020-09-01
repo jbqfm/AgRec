@@ -8,6 +8,7 @@ rtmp/HLSサーバーの自動取得※1
 
 # Requirement
 
+* Windows 10
 * Python    3.6
 * m3u8      0.6.0
 * requests  2.20.0
