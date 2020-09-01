@@ -4,7 +4,7 @@
 
 # Features
 
-rtmp/HLSサーバーの自動取得※1
+rtmp/HLSサーバーの自動取得<sup>[1](#note1)</sup>
 
 # Requirement
 
@@ -27,12 +27,12 @@ python demo.py -t TIME -o OUTPUT -m MODE -mu MULTI
 ```
 * `-t TIME`		…録画時間(秒)
 * `-o OUTPUT`	…保存ファイル名
-* `-m MODE`		…モード(1～3)※2
+* `-m MODE`		…モード(1～3)<sup>[2](#note2)</sup>
 * `-mu MULTI`	…同時録画数
 
 # Note
-※1 HLSのサーバーについては各自調べてください
-※2 1:rtmp，2:HLS，3:両方
+<small id="note1">無理やりですが</small>
+<small id="note2">無理やりですが</small>
 
 
 # Author
