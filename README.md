@@ -19,7 +19,7 @@ rtmp/HLSサーバーの自動取得<sup id="note_ref-1"><a href="#note-1">[注1]
  pip install m3u8
  pip install requests
  ```
-2. rtmpdump.exe、ffmpeg.exeの配置
+2. [rtmpdump.exe](http://rtmpdump.mplayerhq.hu/download/)、[ffmpeg.exe](https://ffmpeg.zeranoe.com/builds/)の配置
 
 # Usage
 
