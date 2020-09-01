@@ -4,7 +4,7 @@
 
 # Features
 
-rtmp/HLSサーバーの自動取得^1
+rtmp/HLSサーバーの自動取得[^1]
 
 # Requirement
 
