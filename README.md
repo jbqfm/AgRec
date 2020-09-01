@@ -4,7 +4,7 @@
 
 # Features
 
-rtmp/HLSサーバーの自動取得※1
+rtmp/HLSサーバーの自動取得[^1]
 
 # Requirement
 
@@ -30,7 +30,7 @@ python demo.py -t TIME -o OUTPUT -m MODE -mu MULTI
 *`-mu MULTI`	…同時録画数
 
 # Note
-※1 HLSのサーバーについては各自調べてください。
+[^1] HLSのサーバーについては各自調べてください。
 ※2 1:rtmp，2:HLS，3:両方
 
 
