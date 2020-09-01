@@ -26,7 +26,7 @@
 
    [ここ](https://github.com/jbqfm/AgRec/blob/8af3e77d857fb41e3d6eb67dce950ca0bcf9589c/AgRec.py#L136)以下2行を下記のように編集
    ```
-   high = [高画質版を含むVariantなM3U8アドレス]
+   high = '<高画質版を含むVariantなM3U8アドレス>'
    pl = None
    ```
    ※m3u8アドレスは各自調べてください。
