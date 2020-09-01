@@ -19,8 +19,8 @@ from threading import (Event, Thread)
 parser = argparse.ArgumentParser(description='AgRec')
 parser.add_argument('-t','--time', help='録画時間(ss)',type=int)
 parser.add_argument('-o', '--output', help='ファイル名')
-parser.add_argument('-m', '--mode', help='録画モード[1-3](1：rtmp、2：hls、3：両方)', type=int)
-parser.add_argument('-mu', '--multi', help='同時録画数(1サーバー1接続を上限)',type=int)
+parser.add_argument('-m', '--mode', help='録画モード[1-3](1：rtmp、2：hls、3：両方)', type=int,default=1)
+parser.add_argument('-mu', '--multi', help='同時録画数(1サーバー1接続を上限)',type=int,default=1)
 args = parser.parse_args()
 
 
@@ -34,20 +34,6 @@ def ngchr(str):
 			str = str.replace(ch,rm)
 	return str
 
-def is_int(s):
-	try:
-		int(s)
-		return int(s)
-	except ValueError:
-		return False
-
-def index_Multi(List,liter):
-	#Listはリスト本体・literは検索したい文字
-	index_L = []
-	for val in range(0,len(List)):
-		if liter == List[val]:
-			index_L.append(val)
-	return index_L
 
 #サーバーチェック
 def svchk(num):
@@ -101,6 +87,14 @@ def m3u8get(v_m3u8):
 	pl = urls[bands.index(max(bands))]
 	return pl
 	
+def play(_pl):
+	if high:
+		pl = m3u8get(high)
+	else:
+		pl = _pl
+	print(pl)
+	cmd = ('"{0}" "{1}"').format(str(ffplaypath),pl)
+	subprocess.run(cmd,shell=True)
 #rtmp録画
 def rtmp(_t,_file,_url):
 	flvs = []
@@ -131,6 +125,7 @@ def hls(_t,_file,_m3u8):
 dir = Path.cwd()
 dumppath = dir / 'exe' / 'rtmpdump.exe'
 ffmpegpath = dir / 'exe' / 'ffmpeg.exe'
+ffplaypath = dir / 'exe' / 'ffplay.exe'
 listurl='http://www.uniqueradio.jp/agplayerf/getfmsListHD.php'
 
 #高画質版に対応する場合はここを編集
@@ -141,11 +136,21 @@ fname = args.output
 t = args.time
 m = args.mode
 mu = args.multi
+code = 0
+if not fname:
+	code = 1
+if not t:
+	code += 1
+
+if code > 1:
+	play(pl)
+	sys.exit()
+if code == 1:
+	sys.exit()
 now = dt.now()
 DATE = now.strftime('%Y%m%d%H%M')
 DATE8 = DATE[:-4]
-fname = fname + '_[%s]' % DATE8
-fname = Path(fname)
+fname = Path(ngchr(fname) + '_[%s]' % DATE8)
 rtmpurl = None
 if fname.suffix == '':
 	fname = Path(str(fname) + '.mp4')
@@ -156,17 +161,21 @@ if m != 2:
 	if not rtmpurl or len(rtmpurl) == 0:
 		m = 2
 if m != 1:
-	if alexa:
+	if high:
 		pl = m3u8get(high)
-print(pl)
 if pl:
 	hls= Thread(target=hls,args=(t,fname,pl))
 if rtmpurl:
 	rtmp= Thread(target=rtmp,args=(t,fname,rtmpurl))
 if m == 2:
 	hls.start()
+	hls.join()
 elif m ==3:
 	hls.start()
 	rtmp.start()
+	hls.join()
+	rtmp.join()
 else:
 	rtmp.start()
+	rtmp.join()
+sys.exit()
