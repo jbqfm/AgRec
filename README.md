@@ -8,9 +8,9 @@ rtmp/HLSサーバーの自動取得[^1]
 
 # Requirement
 
-*Python    3.6
-*m3u8      0.6.0
-*requests  2.20.0
+* Python    3.6
+* m3u8      0.6.0
+* requests  2.20.0
 
 # Installation
 
@@ -24,13 +24,13 @@ pip install requests
 ```bash
 python demo.py -t TIME -o OUTPUT -m MODE -mu MULTI
 ```
-*`-t TIME`		…録画時間(秒)
-*`-o OUTPUT`	…保存ファイル名
-*`-m MODE`		…モード(1～3)※2
-*`-mu MULTI`	…同時録画数
+* `-t TIME`		…録画時間(秒)
+* `-o OUTPUT`	…保存ファイル名
+* `-m MODE`		…モード(1～3)※2
+* `-mu MULTI`	…同時録画数
 
 # Note
-[^1] HLSのサーバーについては各自調べてください。
+[^1]: HLSのサーバーについては各自調べてください。
 ※2 1:rtmp，2:HLS，3:両方
 
 
