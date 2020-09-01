@@ -14,11 +14,12 @@ rtmp/HLSサーバーの自動取得<sup id="note_ref-1"><a href="#note-1">[注1]
 * requests  2.20.0
 
 # Installation
-
-```bash
-pip install m3u8
-pip install requests
-```
+1. Pythonパッケージのインストール
+ ```bash
+ pip install m3u8
+ pip install requests
+ ```
+2. rtmpdump.exe、ffmpeg.exeの配置
 
 # Usage
 
