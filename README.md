@@ -24,7 +24,7 @@ rtmp/HLSサーバーの自動取得<sup id="note_ref-1"><a href="#note-1">[注1]
 # Usage
 
 ```bash
-python demo.py -t TIME -o OUTPUT -m MODE -mu MULTI
+python AgRec.py -t TIME -o OUTPUT -m MODE -mu MULTI
 ```
 * `-t TIME`		…録画時間(秒)
 * `-o OUTPUT`	…保存ファイル名
