@@ -4,7 +4,8 @@
 
 # Features
 
-rtmp/HLSサーバーの自動取得
+* rtmp/HLSサーバーの自動取得
+* 超A&G+高画質版の再生/録画
 
 # Requirement
 
