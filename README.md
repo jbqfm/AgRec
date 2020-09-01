@@ -15,19 +15,19 @@ rtmp/HLSサーバーの自動取得
 
 # Installation
 1. Pythonパッケージのインストール
- ```
- pip install m3u8
- pip install requests
- ```
+   ```
+   pip install m3u8
+   pip install requests
+   ```
 2. [rtmpdump.exe](http://rtmpdump.mplayerhq.hu/download/)、[ffmpeg.exe](https://ffmpeg.zeranoe.com/builds/)をAgRec\\exeに配置
 
 3. AgRec.pyの編集(高画質版利用時のみ)
- [ここ](https://github.com/jbqfm/AgRec/blob/8af3e77d857fb41e3d6eb67dce950ca0bcf9589c/AgRec.py#L136)以下2行を下記のように編集
- ```
- high = [高画質版を含むVariantなM3U8アドレス]
- pl = None
- ```
- ※m3u8アドレスは各自調べてください。
+   [ここ](https://github.com/jbqfm/AgRec/blob/8af3e77d857fb41e3d6eb67dce950ca0bcf9589c/AgRec.py#L136)以下2行を下記のように編集
+   ```
+   high = [高画質版を含むVariantなM3U8アドレス]
+   pl = None
+   ```
+   ※m3u8アドレスは各自調べてください。
 # Usage
 
 ```
