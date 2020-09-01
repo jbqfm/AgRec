@@ -30,7 +30,7 @@ python demo.py -t TIME -o OUTPUT -m MODE -mu MULTI
 * `-mu MULTI`	…同時録画数
 
 # Note
-^1: HLSのサーバーについては各自調べてください。
+[^1]: HLSのサーバーについては各自調べてください。
 
 
 
