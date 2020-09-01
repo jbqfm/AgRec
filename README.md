@@ -20,7 +20,7 @@
    pip install m3u8
    pip install requests
    ```
-2. [rtmpdump.exe](http://rtmpdump.mplayerhq.hu/download/)、[ffmpeg.exe](https://ffmpeg.zeranoe.com/builds/)をAgRec\\exeに配置
+2. [rtmpdump.exe](http://rtmpdump.mplayerhq.hu/download/)、[ffmpeg.exe・ffplay.exe](https://ffmpeg.zeranoe.com/builds/)をAgRec\\exeに配置
 
 3. AgRec.pyの編集(高画質版利用時のみ)
 
