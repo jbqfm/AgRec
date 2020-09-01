@@ -23,6 +23,7 @@
 2. [rtmpdump.exe](http://rtmpdump.mplayerhq.hu/download/)、[ffmpeg.exe](https://ffmpeg.zeranoe.com/builds/)をAgRec\\exeに配置
 
 3. AgRec.pyの編集(高画質版利用時のみ)
+
    [ここ](https://github.com/jbqfm/AgRec/blob/8af3e77d857fb41e3d6eb67dce950ca0bcf9589c/AgRec.py#L136)以下2行を下記のように編集
    ```
    high = [高画質版を含むVariantなM3U8アドレス]
