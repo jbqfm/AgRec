@@ -31,8 +31,8 @@ python demo.py -t TIME -o OUTPUT -m MODE -mu MULTI
 * `-mu MULTI`	…同時録画数
 
 # Note
-1 <small id="note1">HLSのアドレスは各自で調べてください</small>
-2 <small id="note2">1：RTMP 2：HLS 3：両方</small>
+<small id="note1">HLSのアドレスは各自で調べてください</small></br>
+<small id="note2">1：RTMP 2：HLS 3：両方</small>
 
 
 # Author
