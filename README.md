@@ -42,6 +42,7 @@ python AgRec.py -t TIME -o OUTPUT -m MODE -mu MULTI
 
 `TIME`・`OUTPUT`ともに省略すると放送中の番組をffplayにて視聴できます。どちらか片方のみ省略すると動作しません。
 
+タスクスケジューラに上記コマンドを登録します。
 # Note
 1. <b><a id="note-1" href="#note_ref-1">^</a></b> 1：RTMP 2：HLS 3：両方
 
