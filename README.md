@@ -29,7 +29,7 @@
    high = '<高画質版を含むVariantなM3U8アドレス>'
    pl = None
    ```
-   ※m3u8アドレスは各自調べてください。
+   ※[m3u8アドレスは各自調べてください。](https://jbqfm.blogspot.com/2020/09/a-hls.html)
 # Usage
 
 ```
