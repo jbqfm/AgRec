@@ -39,6 +39,7 @@ python AgRec.py -t TIME -o OUTPUT -m MODE -mu MULTI
 * `-o OUTPUT`	…保存ファイル名
 * `-m MODE`		…モード(1～3；初期値：1)<sup id="note_ref-1"><a href="#note-1">[注1]</a></sup>
 * `-mu MULTI`	…同時録画数(初期値：1)
+
 `TIME`・`OUTPUT`ともに省略すると放送中の番組をffplayにて視聴できます。
 どちらか片方のみ省略すると動作しません
 # Note
