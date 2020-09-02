@@ -40,6 +40,7 @@ python AgRec.py -t TIME -o OUTPUT -m MODE -mu MULTI
 例)毎週火曜・23:00-23:30の番組(ひだかくま)の場合  
 * トリガー ： 毎週火曜日、22:59:30に起動  
 * 操作 ： `AgRec.py -t 1860 -o 'rec\ひだかくま\ひだかくま' -m 3 -mu 2`  
+  
 →rec\\ひだかくま\\ひだかくま_\[YYYYMMDD\].mp4
 
 # Note  
