@@ -117,6 +117,7 @@ def rtmp(_t,_file,_url):
 
 #HLS録画
 def hls(_t,_file,_m3u8):
+	sleep(30) #hlsのラグ調整
 	td = datetime.timedelta(seconds=_t)
 	h_out = str(_file.parent / Path(_file.stem + '(hls)' + _file.suffix))
 	h_cmd = ('"{0}" -ss 0 -i "{1}" -t {2} -y -c copy "{3}"').format(str(ffmpegpath),_m3u8,td,h_out)
